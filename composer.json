@@ -1,0 +1,32 @@
+{
+    "name": "imonroe/composer_demo",
+    "description": "Demo",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Ian Monroe",
+            "email": "ian@ianmonroe.com"
+        }
+    ],
+    "require": {
+        "imonroe/ana": "^1.0",
+        "guzzlehttp/guzzle": "^7.0@dev",
+        "components/jquery": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "imonroe\\composer_demo\\": "src/"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "scripts": {
+        "sniff": [
+            "./vendor/bin/phpcs --standard=PSR2 ./src"
+        ],
+        "lint": [
+            "./vendor/bin/phpcbf --standard=PSR2 ./src"
+        ]
+    }
+}
